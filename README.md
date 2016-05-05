@@ -5,7 +5,7 @@ Home: http://jupyter.org
 
 Package license: BSD 3-clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: jupyter_client contains the reference implementation of the Jupyter protocol.
 
