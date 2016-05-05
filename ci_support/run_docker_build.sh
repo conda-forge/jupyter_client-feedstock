@@ -20,7 +20,7 @@ channels:
 conda-build:
  root-dir: /feedstock_root/build_artefacts
 
-show_channel_urls: True
+show_channel_urls: true
 
 CONDARC
 )
@@ -40,7 +40,7 @@ echo "$config" > ~/.condarc
 conda clean --lock
 
 conda update --yes --all
-conda install --yes conda-build==1.18.2
+conda install --yes conda-build
 conda info
 
 # Embarking on 3 case(s).
