@@ -29,7 +29,7 @@ cat << EOF | docker run -i \
                         -v ${RECIPE_ROOT}:/recipe_root \
                         -v ${FEEDSTOCK_ROOT}:/feedstock_root \
                         -a stdin -a stdout -a stderr \
-                        pelson/obvious-ci:latest_x64 \
+                        condaforge/linux-anvil \
                         bash || exit $?
 
 export BINSTAR_TOKEN=${BINSTAR_TOKEN}
