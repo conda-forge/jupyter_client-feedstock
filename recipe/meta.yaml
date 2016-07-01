@@ -1,4 +1,4 @@
-{% set version = "4.2.2" %}
+{% set version = "4.3.0" %}
 
 package:
   name: jupyter_client
@@ -7,7 +7,7 @@ package:
 source:
   fn: jupyter_client-{{ version }}.tar.gz
   url: https://github.com/jupyter/jupyter_client/archive/{{ version }}.tar.gz
-  md5: 988ea87554215a83c6ad52e554d8d8c4
+  md5: 257d9f5429dac4d9511db84d201d3a9e
 
 build:
   number: 0
