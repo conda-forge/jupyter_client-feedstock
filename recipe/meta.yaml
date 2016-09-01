@@ -34,6 +34,7 @@ test:
 about:
   home: http://jupyter.org
   license: BSD 3-clause
+  license_file: COPYING.md
   summary: jupyter_client contains the reference implementation of the Jupyter protocol.
 
 extra:
