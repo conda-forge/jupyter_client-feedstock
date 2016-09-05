@@ -1,4 +1,4 @@
-{% set version = "4.3.0" %}
+{% set version = "4.4.0" %}
 
 package:
   name: jupyter_client
@@ -6,18 +6,19 @@ package:
 
 source:
   fn: jupyter_client-{{ version }}.tar.gz
-  url: https://github.com/jupyter/jupyter_client/archive/{{ version }}.tar.gz
-  md5: 257d9f5429dac4d9511db84d201d3a9e
+  url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
+  sha256: c99a52fac2e5b7a3b714e9252ebf72cbf97536d556ae2b5082baccc3e5cd52ee
 
 build:
   number: 0
-  script: python setup.py install
+  script: pip install --no-deps .
   entry_points:
     - jupyter-kernelspec = jupyter_client.kernelspecapp:KernelSpecApp.launch_instance
 
 requirements:
   build:
     - python
+    - pip
   run:
     - python
     - traitlets
@@ -33,6 +34,7 @@ test:
 about:
   home: http://jupyter.org
   license: BSD 3-clause
+  license_file: COPYING.md
   summary: jupyter_client contains the reference implementation of the Jupyter protocol.
 
 extra:
