@@ -11,6 +11,18 @@ Summary: jupyter_client contains the reference implementation of the Jupyter pro
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_client-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_client-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/jupyter_client-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jupyter_client-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jupyter_client-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jupyter-client-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_client/badges/version.svg)](https://anaconda.org/conda-forge/jupyter_client)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_client/badges/downloads.svg)](https://anaconda.org/conda-forge/jupyter_client)
+
 Installing jupyter_client
 =========================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `jupyter_client` available on your
 ```
 conda search jupyter_client --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_client-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_client-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/jupyter_client-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jupyter_client-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jupyter_client-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jupyter-client-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_client/badges/version.svg)](https://anaconda.org/conda-forge/jupyter_client)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_client/badges/downloads.svg)](https://anaconda.org/conda-forge/jupyter_client)
 
 
 Updating jupyter_client-feedstock
