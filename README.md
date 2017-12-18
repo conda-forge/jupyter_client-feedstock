@@ -14,7 +14,9 @@ Summary: jupyter_client contains the reference implementation of the Jupyter pro
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_client-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_client-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_client-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_client-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/jupyter_client-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jupyter_client-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jupyter_client-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jupyter-client-feedstock/branch/master)
 
 Current release info
 ====================
