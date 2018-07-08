@@ -10,14 +10,15 @@ source:
   sha256: 27befcf0446b01e29853014d6a902dd101ad7d7f94e2252b1adca17c3466b761
 
 build:
-  number: 0
-  script: pip install --no-deps .
+  noarch: python
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - jupyter-kernelspec = jupyter_client.kernelspecapp:KernelSpecApp.launch_instance
     - jupyter-run = jupyter_client.runapp:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
