@@ -14,14 +14,15 @@ Summary: jupyter_client contains the reference implementation of the Jupyter pro
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jupyter_client-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jupyter_client-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/jupyter_client-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jupyter_client-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jupyter_client-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jupyter-client-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/jupyter_client-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/jupyter_client-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_client/badges/version.svg)](https://anaconda.org/conda-forge/jupyter_client)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jupyter_client/badges/downloads.svg)](https://anaconda.org/conda-forge/jupyter_client)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter_client-green.svg)](https://anaconda.org/conda-forge/jupyter_client) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter_client.svg)](https://anaconda.org/conda-forge/jupyter_client) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter_client.svg)](https://anaconda.org/conda-forge/jupyter_client) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter_client.svg)](https://anaconda.org/conda-forge/jupyter_client) |
 
 Installing jupyter_client
 =========================
