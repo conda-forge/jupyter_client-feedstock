@@ -11,11 +11,12 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - jupyter-kernelspec = jupyter_client.kernelspecapp:KernelSpecApp.launch_instance
     - jupyter-run = jupyter_client.runapp:main
+    - jupyter-kernel = jupyter_client.kernelapp:main
 
 requirements:
   host:
