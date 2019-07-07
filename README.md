@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About jupyter_client
 ====================
 
@@ -18,8 +14,15 @@ Summary: jupyter_client contains the reference implementation of the Jupyter pro
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/jupyter_client-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/jupyter_client-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3039&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyter_client-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
