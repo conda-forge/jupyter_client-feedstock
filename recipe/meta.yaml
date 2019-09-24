@@ -9,8 +9,7 @@ source:
   sha256: f406f214f9daa92be110d5b83d62f3451ffc73d3522db7350f0554683533ab18
 
 build:
-  noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - jupyter-kernelspec = jupyter_client.kernelspecapp:KernelSpecApp.launch_instance
@@ -23,6 +22,7 @@ requirements:
     - pip
   run:
     - python
+    - pywin32  # [win]
     - traitlets
     - jupyter_core
     - python-dateutil >=2.1
