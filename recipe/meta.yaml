@@ -1,4 +1,4 @@
-{% set version = "5.3.3" %}
+{% set version = "5.3.4" %}
 
 package:
   name: jupyter_client
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: f406f214f9daa92be110d5b83d62f3451ffc73d3522db7350f0554683533ab18
+  sha256: 60e6faec1031d63df57f1cc671ed673dced0ed420f4377ea33db37b1c188b910
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - jupyter-kernelspec = jupyter_client.kernelspecapp:KernelSpecApp.launch_instance
