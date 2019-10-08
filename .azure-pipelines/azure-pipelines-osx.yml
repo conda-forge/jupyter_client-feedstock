@@ -24,7 +24,7 @@ jobs:
   # TODO: Fast finish on azure pipelines?
   - script: |
       echo "Fast Finish"
-
+      
 
   - script: |
       echo "Removing homebrew from Azure to avoid conflicts."
@@ -76,7 +76,7 @@ jobs:
       source activate base
       export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
       upload_package ./ ./recipe ./.ci_support/${CONFIG}.yaml
-    displayName: Upload recipe
+    displayName: Upload package
     env:
       BINSTAR_TOKEN: $(BINSTAR_TOKEN)
     condition: not(eq(variables['UPLOAD_PACKAGES'], 'False'))
