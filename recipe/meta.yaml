@@ -36,7 +36,6 @@ test:
     - ipython
     - mock
     - pytest
-    - win_unicode_console  # [win]
   imports:
     - jupyter_client
   commands:

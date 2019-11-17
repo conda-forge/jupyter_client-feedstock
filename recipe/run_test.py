@@ -1,5 +1,5 @@
 import os
-import pytest
+import subprocess
 import jupyter_client
 import sys
 
@@ -9,6 +9,8 @@ OSX = sys.platform == "darwin"
 PY38 = sys.version_info >= (3, 8)
 
 args = [
+    sys.executable,
+    "-m", "pytest",
     os.path.dirname(jupyter_client.__file__),
     "-vv"
 ]
@@ -28,14 +30,15 @@ if WIN:
         "not tcp_cinfo",
     ]
     if PY38:
-        # needs https://github.com/ipython/ipykernel/pull/456
-        skips += [
-            "not test_client"
-        ]
+        print("skipping win/py38: https://github.com/ipython/ipykernel/pull/456")
+        sys.exit(0)
 
 if skips:
     args += ["-k", " and ".join(skips)]
 
 print("PYTEST ARGS", args)
 
-sys.exit(pytest.main(args))
+env = dict(os.environ)
+env["PYTHONIOENCODING"] = "utf-8"
+
+sys.exit(subprocess.call(args, env=env))
