@@ -23,7 +23,9 @@ if WIN or (OSX and PY38):
 
 if WIN:
     skips += [
-        "not tcp_lifecycle"
+        "not tcp_lifecycle",
+        "not start_sequence_tcp_kernels",
+        "not tcp_cinfo",
     ]
 
 if skips:
