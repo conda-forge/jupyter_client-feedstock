@@ -10,7 +10,6 @@ PY38 = sys.version_info >= (3, 8)
 
 args = [
     os.path.dirname(jupyter_client.__file__),
-    "--cov", "jupyter_client",
     "-vv"
 ]
 
