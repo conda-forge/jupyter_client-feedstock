@@ -30,6 +30,9 @@ requirements:
     - tornado >=4.1
     - traitlets
 
+{% set skips = "" %}
+{% set skips = "-k 'not start_parallel_process_kernels'" %}  # [win or (osx and py38)]
+
 test:
   requires:
     - ipykernel
@@ -37,12 +40,13 @@ test:
     - mock
     - pytest-azurepipelines
     - pytest-cov
+    - win_unicode_console  # [win]
   imports:
     - jupyter_client
   commands:
     - jupyter kernelspec list
     - jupyter run -h
-    - py.test --pyargs jupyter_client --cov jupyter_client -vv
+    - py.test --pyargs jupyter_client --cov jupyter_client -vv {{ skips }}
 
 about:
   home: https://jupyter.org
