@@ -35,6 +35,7 @@ test:
     - ipykernel
     - ipython
     - mock
+    - pytest-azurepipelines
     - pytest-cov
   imports:
     - jupyter_client
