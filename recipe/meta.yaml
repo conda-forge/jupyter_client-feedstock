@@ -30,9 +30,6 @@ requirements:
     - tornado >=4.1
     - traitlets
 
-{% set skips = "" %}
-{% set skips = "-k 'not start_parallel_process_kernels'" %}  # [win or (osx and py38)]
-
 test:
   requires:
     - ipykernel
@@ -46,7 +43,6 @@ test:
   commands:
     - jupyter kernelspec list
     - jupyter run -h
-    - py.test --pyargs jupyter_client --cov jupyter_client -vv {{ skips }}
 
 about:
   home: https://jupyter.org
