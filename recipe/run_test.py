@@ -16,11 +16,13 @@ args = [
 skips = []
 
 if WIN or (OSX and PY38):
-    skips += ["not start_parallel_process_kernels"]
+    skips += [
+        "not start_parallel_process_kernels",
+        "not start_sequence_process_kernels"
+    ]
 
 if WIN:
     skips += [
-        "not start_sequence_process_kernels",
         "not tcp_lifecycle"
     ]
 
