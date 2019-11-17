@@ -27,6 +27,11 @@ if WIN:
         "not start_sequence_tcp_kernels",
         "not tcp_cinfo",
     ]
+    if PY38:
+        # needs https://github.com/ipython/ipykernel/pull/456
+        skips += [
+            "not test_client"
+        ]
 
 if skips:
     args += ["-k", " and ".join(skips)]
