@@ -14,7 +14,20 @@ args = [
     "-vv"
 ]
 
+skips = []
+
 if WIN or (OSX and PY38):
-    args += ["-k", "not start_parallel_process_kernels"]
+    skips += ["not start_parallel_process_kernels"]
+
+if WIN:
+    skips += [
+        "not start_sequence_process_kernels",
+        "not tcp_lifecycle"
+    ]
+
+if skips:
+    args += ["-k", " and ".join(skips)]
+
+print("PYTEST ARGS", args)
 
 sys.exit(pytest.main(args))

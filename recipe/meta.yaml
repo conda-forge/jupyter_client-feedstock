@@ -35,8 +35,6 @@ test:
     - ipykernel
     - ipython
     - mock
-    - pytest-azurepipelines
-    - pytest-cov
     - win_unicode_console  # [win]
   imports:
     - jupyter_client
