@@ -1,9 +1,9 @@
 About jupyter_client
 ====================
 
-Home: http://jupyter.org
+Home: https://jupyter.org
 
-Package license: BSD 3-clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -269,6 +269,7 @@ Feedstock Maintainers
 =====================
 
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@carreau](https://github.com/carreau/)
 * [@jakirkham](https://github.com/jakirkham/)
 * [@minrk](https://github.com/minrk/)

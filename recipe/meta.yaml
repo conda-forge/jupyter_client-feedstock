@@ -1,4 +1,4 @@
-{% set version = "5.3.3" %}
+{% set version = "5.3.4" %}
 
 package:
   name: jupyter_client
@@ -6,41 +6,51 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: f406f214f9daa92be110d5b83d62f3451ffc73d3522db7350f0554683533ab18
+  sha256: 60e6faec1031d63df57f1cc671ed673dced0ed420f4377ea33db37b1c188b910
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
+    - jupyter-kernel = jupyter_client.kernelapp:main
     - jupyter-kernelspec = jupyter_client.kernelspecapp:KernelSpecApp.launch_instance
     - jupyter-run = jupyter_client.runapp:main
-    - jupyter-kernel = jupyter_client.kernelapp:main
 
 requirements:
   host:
-    - python
     - pip
-  run:
     - python
-    - pywin32  # [win]
-    - traitlets
+  run:
+    - entrypoints
     - jupyter_core
+    - python
     - python-dateutil >=2.1
+    - pywin32  # [win]
     - pyzmq >=13
     - tornado >=4.1
+    - traitlets
 
 test:
+  requires:
+    - ipykernel
+    - ipython
+    - mock
+    - pytest
+  imports:
+    - jupyter_client
   commands:
     - jupyter kernelspec list
     - jupyter run -h
-  imports:
-    - jupyter_client
 
 about:
-  home: http://jupyter.org
-  license: BSD 3-clause
+  home: https://jupyter.org
+  license: BSD-3-Clause
+  license_family: BSD
   license_file: COPYING.md
   summary: jupyter_client contains the reference implementation of the Jupyter protocol.
+  dev_url: https://github.com/jupyter/jupyter_client
+  doc_url: https://jupyter-client.readthedocs.io/en/stable/
+  doc_source_url: https://github.com/jupyter/jupyter_client/tree/master/docs
 
 extra:
   recipe-maintainers:
@@ -50,3 +60,4 @@ extra:
     - ocefpaf
     - carreau
     - SylvainCorlay
+    - bollwyvl
