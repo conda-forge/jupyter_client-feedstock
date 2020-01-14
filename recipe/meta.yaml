@@ -9,7 +9,7 @@ source:
   sha256: 60e6faec1031d63df57f1cc671ed673dced0ed420f4377ea33db37b1c188b910
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - jupyter-kernel = jupyter_client.kernelapp:main
@@ -22,10 +22,10 @@ requirements:
     - python
   run:
     - entrypoints
-    - jupyter_core
+    - jupyter_core >=4.6.0
     - python
     - python-dateutil >=2.1
-    - pywin32  # [win]
+    - pywin32 >=1.0  # [win]
     - pyzmq >=13
     - tornado >=4.1
     - traitlets
