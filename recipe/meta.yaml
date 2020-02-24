@@ -10,6 +10,7 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - jupyter-kernel = jupyter_client.kernelapp:main
@@ -19,13 +20,12 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
   run:
     - entrypoints
     - jupyter_core >=4.6.0
-    - python
+    - python >=3.5
     - python-dateutil >=2.1
-    - pywin32 >=1.0  # [win]
     - pyzmq >=13
     - tornado >=4.1
     - traitlets
@@ -34,13 +34,16 @@ test:
   requires:
     - ipykernel
     - ipython
-    - mock
     - pytest
+    - sphinx
+    - pip
   imports:
     - jupyter_client
   commands:
+    - pip check
     - jupyter kernelspec list
     - jupyter run -h
+    - pytest --pyargs jupyter_client
 
 about:
   home: https://jupyter.org
