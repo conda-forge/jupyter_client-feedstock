@@ -9,8 +9,8 @@ source:
   sha256: 1fac6e3be1e797aea33d5cd1cfa568ff1ee71e01180bc89f64b24ee274f1f126
 
 build:
-  number: 0
-  noarch: python
+  number: 1
+  skip: True  # [py<35]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - jupyter-kernel = jupyter_client.kernelapp:main
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python
   run:
     - entrypoints
     - jupyter_core >=4.6.0
-    - python >=3.5
+    - python
     - python-dateutil >=2.1
     - pyzmq >=13
     - tornado >=4.1
@@ -64,3 +64,4 @@ extra:
     - carreau
     - SylvainCorlay
     - bollwyvl
+    - ccordoba12
