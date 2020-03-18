@@ -43,7 +43,7 @@ test:
     - pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest --pyargs jupyter_client
+    - pytest --pyargs jupyter_client  # [linux]
 
 about:
   home: https://jupyter.org
