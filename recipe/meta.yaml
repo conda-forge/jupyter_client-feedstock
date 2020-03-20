@@ -35,7 +35,6 @@ test:
     - ipykernel
     - ipython
     - pytest
-    - sphinx
     - pip
   imports:
     - jupyter_client
