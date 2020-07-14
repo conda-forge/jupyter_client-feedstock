@@ -22,7 +22,6 @@ requirements:
     - pip
     - python >=3.5
   run:
-    - entrypoints
     - jupyter_core >=4.6.0
     - python >=3.5
     - python-dateutil >=2.1
@@ -32,17 +31,22 @@ requirements:
 
 test:
   requires:
+    - async_generator
     - ipykernel
     - ipython
-    - pytest
+    - mock
     - pip
+    - pytest
+    - pytest-asyncio
+    - pytest-cov
+    - pytest-timeout
   imports:
     - jupyter_client
   commands:
-    - pip check
+    - python -m pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest --pyargs jupyter_client
+    - pytest --pyargs jupyter_client --cov jupyter_client
 
 about:
   home: https://jupyter.org
