@@ -9,7 +9,7 @@ source:
   sha256: 649ca3aca1e28f27d73ef15868a7c7f10d6e70f761514582accec3ca6bb13085
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -67,3 +67,4 @@ extra:
     - carreau
     - SylvainCorlay
     - bollwyvl
+    - davidbrochart
