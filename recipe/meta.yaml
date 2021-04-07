@@ -1,4 +1,4 @@
-{% set version = "6.1.12" %}
+{% set version = "6.1.13" %}
 
 package:
   name: jupyter_client
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: c4bca1d0846186ca8be97f4d2fa6d2bae889cce4892a167ffa1ba6bd1f73e782
+  sha256: d03558bc9b7955d8b4a6df604a8d9d257e00bcea7fb364fe41cdef81d998a966
 
 build:
   number: 0
@@ -28,6 +28,7 @@ requirements:
     - pyzmq >=13
     - tornado >=4.1
     - traitlets
+    - nest-asyncio >=1.5
 
 test:
   requires:
