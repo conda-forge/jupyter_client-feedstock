@@ -124,6 +124,7 @@ Feedstock Maintainers
 * [@carreau](https://github.com/carreau/)
 * [@davidbrochart](https://github.com/davidbrochart/)
 * [@jakirkham](https://github.com/jakirkham/)
+* [@kevin-bates](https://github.com/kevin-bates/)
 * [@minrk](https://github.com/minrk/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@pelson](https://github.com/pelson/)
