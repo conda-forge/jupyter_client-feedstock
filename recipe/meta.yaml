@@ -20,15 +20,16 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6.1
   run:
+    - entrypoints
     - jupyter_core >=4.6.0
-    - python >=3.5
+    - nest-asyncio >=1.5
+    - python >=3.6.1
     - python-dateutil >=2.1
     - pyzmq >=13
     - tornado >=4.1
     - traitlets
-    - nest-asyncio >=1.5
 
 test:
   requires:
@@ -47,7 +48,7 @@ test:
     - python -m pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest --pyargs jupyter_client --cov jupyter_client
+    - pytest --pyargs jupyter_client --cov jupyter_client --cov-report term-missing:skip-covered
 
 about:
   home: https://jupyter.org
