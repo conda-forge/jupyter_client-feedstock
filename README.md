@@ -120,6 +120,7 @@ Feedstock Maintainers
 =====================
 
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
+* [@blink1073](https://github.com/blink1073/)
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@carreau](https://github.com/carreau/)
 * [@davidbrochart](https://github.com/davidbrochart/)
