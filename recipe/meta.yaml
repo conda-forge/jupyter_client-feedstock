@@ -20,15 +20,15 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6.1
+    - python >=3.7
   run:
     - entrypoints
-    - jupyter_core >=4.6.0
-    - nest-asyncio >=1.5
-    - python >=3.6.1
+    - jupyter_core >=4.9.2
+    - nest-asyncio >=1.5.4
+    - python >=3.7
     - python-dateutil >=2.1
-    - pyzmq >=13
-    - tornado >=4.1
+    - pyzmq >=22.3
+    - tornado >=6.0
     - traitlets
 
 test:
