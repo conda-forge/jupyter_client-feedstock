@@ -1,4 +1,4 @@
-{% set version = "7.2.0" %}
+{% set version = "7.2.1" %}
 
 package:
   name: jupyter_client
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: 00e284dd1a5ac605ead8a42ada2a97041b642c1ef6cefb30c3c415b4eb94bead
+  sha256: aa177279e93205d0681ec0e2e210da01b22c5a1464a56abd455adcac64f0de91
 
 build:
   number: 0
