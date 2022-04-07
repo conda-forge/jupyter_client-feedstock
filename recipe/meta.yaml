@@ -9,7 +9,7 @@ source:
   sha256: 8fdbad344a8baa6a413d86d25bbf87ce21cb2b4aa5a8e0413863b9754eb8eb8a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -26,7 +26,7 @@ requirements:
     - jupyter_core >=4.9.2
     - nest-asyncio >=1.5.4
     - python >=3.7
-    - python-dateutil >=2.1
+    - python-dateutil >=2.8.2
     - pyzmq >=22.3
     - tornado >=6.0
     - traitlets
