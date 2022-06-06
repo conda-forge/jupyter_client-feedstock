@@ -9,7 +9,7 @@ source:
   sha256: 8f92691bf2d8c670e108813a0290d93a3dc84f74fb844e915b7e587ef2fcbf44
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -28,7 +28,7 @@ requirements:
     - nest-asyncio >=1.5.4
     - python >=3.7
     - python-dateutil >=2.8.2
-    - pyzmq >=22.3
+    - pyzmq >=23.0
     - tornado >=6.0
     - traitlets
 
@@ -46,7 +46,7 @@ test:
   imports:
     - jupyter_client
   commands:
-    - python -m pip check
+    - pip check
     - jupyter kernelspec list
     - jupyter run -h
     - pytest --pyargs jupyter_client --cov jupyter_client --cov-report term-missing:skip-covered --no-cov-on-fail -k "not test_signal_kernel_subprocesses"
