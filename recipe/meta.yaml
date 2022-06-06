@@ -20,6 +20,7 @@ build:
 requirements:
   host:
     - pip
+    - hatchling
     - python >=3.7
   run:
     - entrypoints
