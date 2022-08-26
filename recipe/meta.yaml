@@ -1,4 +1,4 @@
-{% set version = "7.3.4" %}
+{% set version = "7.3.5" %}
 
 package:
   name: jupyter_client
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: aa9a6c32054b290374f95f73bb0cae91455c58dfb84f65c8591912b8f65e6d56
+  sha256: 3c58466a1b8d55dba0bf3ce0834e4f5b7760baf98d1d73db0add6f19de9ecd1d
 
 build:
   number: 0
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - hatchling
+    - hatchling >=0.25
     - python >=3.7
   run:
     - entrypoints
@@ -29,7 +29,7 @@ requirements:
     - python >=3.7
     - python-dateutil >=2.8.2
     - pyzmq >=23.0
-    - tornado >=6.0
+    - tornado >=6.2
     - traitlets
 
 test:
@@ -49,7 +49,7 @@ test:
     - pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest --pyargs jupyter_client --cov jupyter_client --cov-report term-missing:skip-covered --no-cov-on-fail -k "not test_signal_kernel_subprocesses"
+    - pytest --asyncio-mode=auto --pyargs jupyter_client --cov jupyter_client --cov-report term-missing:skip-covered --no-cov-on-fail -k "not test_signal_kernel_subprocesses"
 
 about:
   home: https://jupyter.org
