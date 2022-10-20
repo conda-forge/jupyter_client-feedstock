@@ -35,7 +35,7 @@ requirements:
 test:
   requires:
     - async_generator
-    - ipykernel
+    - ipykernel >=6.12
     - ipython
     - mock
     - pip
