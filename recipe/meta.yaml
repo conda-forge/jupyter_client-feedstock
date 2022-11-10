@@ -20,12 +20,13 @@ build:
 requirements:
   host:
     - pip
-    - hatchling >=1.5
-    - python >=3.8
+    - hatchling >=0.25
+    - python >=3.7
   run:
-    - importlib_metadata >=4.8.3
+    - entrypoints
     - jupyter_core >=4.9.2
-    - python >=3.8
+    - nest-asyncio >=1.5.4
+    - python >=3.7
     - python-dateutil >=2.8.2
     - pyzmq >=23.0
     - tornado >=6.2
