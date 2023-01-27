@@ -42,7 +42,7 @@ test:
   requires:
     - coverage
     - ipykernel >=6.14
-    - paramiko; sys_platform == 'win32'
+    - paramiko
     - pytest
     - pytest-jupyter-client >=0.4.1
     - pytest-cov
