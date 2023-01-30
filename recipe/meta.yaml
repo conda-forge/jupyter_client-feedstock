@@ -1,4 +1,5 @@
-{% set version = "7.4.9" %}
+{% set version = "8.0.1" %}
+{% set pytest_args = '-k "not (signal_kernel_subprocesses or start_parallel_thread_kernels or open_tunnel or load_ips or input_request)"' %}
 
 package:
   name: jupyter_client
@@ -6,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: 52be28e04171f07aed8f20e1616a5a552ab9fee9cbbe6c1896ae170c3880d392
+  sha256: 3f67b1c8b7687e6db09bef10ff97669932b5e6ef6f5a8ee56d444b89022c5007
 
 build:
   number: 0
@@ -20,28 +21,27 @@ build:
 requirements:
   host:
     - pip
-    - hatchling >=0.25
-    - python >=3.7
+    - hatchling >=1.5
+    - python >=3.8
   run:
-    - entrypoints
-    - jupyter_core >=4.9.2
-    - nest-asyncio >=1.5.4
-    - python >=3.7
+    - importlib_metadata >=4.8.3
+    - jupyter_core >=4.12,!=5.0.*
+    - python >=3.8
     - python-dateutil >=2.8.2
     - pyzmq >=23.0
     - tornado >=6.2
-    - traitlets
+    - traitlets >=5.3
 
 test:
+  source_files:
+    - tests
   requires:
-    - async_generator
-    - ipykernel >=6.12
-    - ipython
-    - mock
-    - pip
+    - coverage
+    - ipykernel >=6.14
+    - paramiko
     - pytest
-    - pytest-asyncio
     - pytest-cov
+    - pytest-jupyter-client >=0.4.1
     - pytest-timeout
   imports:
     - jupyter_client
@@ -49,7 +49,7 @@ test:
     - pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest --asyncio-mode=auto --pyargs jupyter_client --cov jupyter_client --cov-report term-missing:skip-covered --no-cov-on-fail -k "not test_signal_kernel_subprocesses"
+    - pytest --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
 
 about:
   home: https://jupyter.org
