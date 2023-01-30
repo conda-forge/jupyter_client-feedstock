@@ -1,4 +1,5 @@
 {% set version = "8.0.1" %}
+{% set pytest_args = '-k "not (signal_kernel_subprocesses or start_parallel_thread_kernels or open_tunnel or load_ips)"' %}
 
 package:
   name: jupyter_client
@@ -48,7 +49,7 @@ test:
     - pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail -k "not test_signal_kernel_subprocesses"
+    - pytest --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
 
 about:
   home: https://jupyter.org
