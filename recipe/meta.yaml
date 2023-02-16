@@ -55,7 +55,7 @@ about:
   home: https://jupyter.org
   license: BSD-3-Clause
   license_family: BSD
-  license_file: COPYING.md
+  license_file: LICENSE
   summary: jupyter_client contains the reference implementation of the Jupyter protocol.
   dev_url: https://github.com/jupyter/jupyter_client
   doc_url: https://jupyter-client.readthedocs.io/en/stable/
