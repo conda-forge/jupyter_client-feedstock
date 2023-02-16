@@ -49,7 +49,7 @@ test:
     - pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
+    - pytest -vv --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
 
 about:
   home: https://jupyter.org
