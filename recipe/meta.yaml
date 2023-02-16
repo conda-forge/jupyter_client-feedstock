@@ -1,4 +1,4 @@
-{% set version = "8.0.2" %}
+{% set version = "8.0.3" %}
 {% set pytest_args = "-k \"not (signal_kernel_subprocesses or start_parallel_thread_kernels or start_parallel_process_kernels or open_tunnel or load_ips or input_request or tcp_cinfo) \"" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: 47ac9f586dbcff4d79387ec264faf0fdeb5f14845fa7345fd7d1e378f8096011
+  sha256: ed65498bea6d876ef9d8da3e0db3dd33c5d129f5b2645f56ae03993782966bd0
 
 build:
   number: 0
@@ -49,13 +49,13 @@ test:
     - pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
+    - pytest -vv --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
 
 about:
   home: https://jupyter.org
   license: BSD-3-Clause
   license_family: BSD
-  license_file: COPYING.md
+  license_file: LICENSE
   summary: jupyter_client contains the reference implementation of the Jupyter protocol.
   dev_url: https://github.com/jupyter/jupyter_client
   doc_url: https://jupyter-client.readthedocs.io/en/stable/
