@@ -1,11 +1,11 @@
-About jupyter_client
-====================
+About jupyter_client-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_client-feedstock/blob/main/LICENSE.txt)
 
 Home: https://jupyter.org
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter_client-feedstock/blob/main/LICENSE.txt)
 
 Summary: jupyter_client contains the reference implementation of the Jupyter protocol.
 
