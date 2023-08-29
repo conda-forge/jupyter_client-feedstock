@@ -1,4 +1,4 @@
-{% set version = "8.3.0" %}
+{% set version = "8.3.1" %}
 {% set pytest_args = "-k \"not (signal_kernel_subprocesses or start_parallel_thread_kernels or start_parallel_process_kernels or open_tunnel or load_ips or input_request or tcp_cinfo) \"" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: 3af69921fe99617be1670399a0b857ad67275eefcfa291e2c81a160b7b650f5f
+  sha256: 60294b2d5b869356c893f57b1a877ea6510d60d45cf4b38057f1672d85699ac9
 
 build:
   number: 0
