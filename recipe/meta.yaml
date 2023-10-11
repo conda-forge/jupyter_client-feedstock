@@ -39,6 +39,7 @@ test:
     - coverage
     - ipykernel >=6.14
     - paramiko
+    - pip
     - pytest
     - pytest-cov
     - pytest-jupyter-client >=0.4.1
