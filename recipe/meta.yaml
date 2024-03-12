@@ -1,4 +1,4 @@
-{% set version = "8.6.0" %}
+{% set version = "8.6.1" %}
 {% set pytest_args = "-k \"not (signal_kernel_subprocesses or start_parallel_thread_kernels or start_parallel_process_kernels or open_tunnel or load_ips or input_request or tcp_cinfo) \"" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: 0642244bb83b4764ae60d07e010e15f0e2d275ec4e918a8f7b80fbbef3ca60c7
+  sha256: e842515e2bab8e19186d89fdfea7abd15e39dd581f94e399f00e2af5a1652d3f
 
 build:
   number: 0
@@ -52,7 +52,6 @@ test:
     - jupyter run -h
     - pytest -vv --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
   downstreams:
-    - ipykernel
     - ipywidgets
     - jupyter_server
 
