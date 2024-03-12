@@ -52,7 +52,6 @@ test:
     - jupyter run -h
     - pytest -vv --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
   downstreams:
-    - ipykernel
     - ipywidgets
     - jupyter_server
 
