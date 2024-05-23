@@ -37,6 +37,7 @@ test:
   requires:
     - coverage
     - ipykernel >=6.14
+    - pandoc
     - paramiko
     - pip
     - pytest <8.2
