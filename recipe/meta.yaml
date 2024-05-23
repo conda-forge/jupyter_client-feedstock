@@ -1,5 +1,4 @@
 {% set version = "8.6.2" %}
-{% set pytest_args = "-k \"not (signal_kernel_subprocesses or start_parallel_thread_kernels or start_parallel_process_kernels or open_tunnel or load_ips or input_request or tcp_cinfo) \"" %}
 
 package:
   name: jupyter_client
@@ -40,8 +39,7 @@ test:
     - ipykernel >=6.14
     - paramiko
     - pip
-    - pytest
-    - pytest-cov
+    - pytest <8.2
     - pytest-jupyter-client >=0.4.1
     - pytest-timeout
   imports:
@@ -50,7 +48,8 @@ test:
     - pip check
     - jupyter kernelspec list
     - jupyter run -h
-    - pytest -vv --cov=jupyter_client --cov=branch --cov-report=term-missing:skip-covered --no-cov-on-fail {{ pytest_args }}
+    - coverage run --source=jupyter_client --branch -m pytest -vv -k "not (signal_kernel_subprocesses or start_parallel_thread_kernels or start_parallel_process_kernels or open_tunnel or load_ips or input_request or tcp_cinfo)"
+    - coverage report --show-missing --skip-covered --fail-under=100
   downstreams:
     - ipywidgets
     - jupyter_server
