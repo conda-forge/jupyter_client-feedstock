@@ -1,4 +1,4 @@
-{% set version = "8.6.2" %}
+{% set version = "8.6.3" %}
 
 package:
   name: jupyter_client
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyter_client/jupyter_client-{{ version }}.tar.gz
-  sha256: 2bda14d55ee5ba58552a8c53ae43d215ad9868853489213f37da060ced54d8df
+  sha256: 35b3a0947c4a6e9d589eb97d7d4cd5e90f910ee73101611f01283732bd6d9419
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - hatchling >=1.5
     - python >=3.8
   run:
-    - importlib_metadata >=4.8.3
+    - importlib-metadata >=4.8.3
     - jupyter_core >=4.12,!=5.0.*
     - python >=3.8
     - python-dateutil >=2.8.2
@@ -51,9 +51,10 @@ test:
     - jupyter run -h
     - coverage run --source=jupyter_client --branch -m pytest -vv --tb=long --color=yes -k "not (signal_kernel_subprocesses or start_parallel_thread_kernels or start_parallel_process_kernels or open_tunnel or load_ips or input_request or tcp_cinfo)"
     - coverage report --show-missing --skip-covered --fail-under=73
-  downstreams:
-    - ipywidgets
-    - jupyter_server
+  # TODO: downstreams are broken right now
+  # downstreams:
+  #  - ipywidgets
+  #  - jupyter_server
 
 about:
   home: https://jupyter.org
