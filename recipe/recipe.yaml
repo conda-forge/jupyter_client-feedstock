@@ -55,6 +55,7 @@ tests:
         - pandoc
         - paramiko
         - pip
+        - pytest >=7
         - pytest-jupyter-client >=0.6.2
         - pytest-timeout
         - python ${{ python_min }}.*
