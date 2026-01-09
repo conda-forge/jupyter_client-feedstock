@@ -47,6 +47,7 @@ tests:
   - files:
       source:
         - tests/
+        - pyproject.toml
     requirements:
       run:
         - anyio
@@ -64,7 +65,7 @@ tests:
     script:
       - jupyter kernelspec list
       - jupyter run -h
-      - coverage run --source=jupyter_client --branch -m pytest -vv --tb=long --color=yes -k "${{ pytest_k }}"
+      - coverage run --branch -m pytest -vv --tb=long -k "${{ pytest_k }}"
       - coverage report --show-missing --skip-covered --fail-under=72
 
 about:
