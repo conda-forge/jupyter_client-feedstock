@@ -15,7 +15,7 @@ source:
   sha256: d556811419a4f2d96c869af34e854e3f059b7cc2d6d01a9cd9c85c267691be3e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
@@ -47,11 +47,14 @@ tests:
   - files:
       source:
         - tests/
+        - pyproject.toml
     requirements:
       run:
         - anyio
         - coverage
         - ipykernel >=6.14
+        - msgpack-python
+        - orjson
         - pandoc
         - paramiko
         - pip
@@ -62,7 +65,7 @@ tests:
     script:
       - jupyter kernelspec list
       - jupyter run -h
-      - coverage run --source=jupyter_client --branch -m pytest -vv --tb=long --color=yes -k "${{ pytest_k }}"
+      - coverage run --branch -m pytest -vv --tb=long -k "${{ pytest_k }}"
       - coverage report --show-missing --skip-covered --fail-under=72
 
 about:
