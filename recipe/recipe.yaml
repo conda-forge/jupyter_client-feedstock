@@ -15,7 +15,7 @@ source:
   sha256: d556811419a4f2d96c869af34e854e3f059b7cc2d6d01a9cd9c85c267691be3e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
@@ -52,6 +52,8 @@ tests:
         - anyio
         - coverage
         - ipykernel >=6.14
+        - msgpack-python
+        - orjson
         - pandoc
         - paramiko
         - pip
