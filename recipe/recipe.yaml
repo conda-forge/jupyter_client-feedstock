@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "8.7.0"
+  version: "8.8.0"
   python_check_max: "3.14"
   pytest_k: not (signal_kernel_subprocesses or start_parallel_thread_kernels or start_parallel_process_kernels or open_tunnel or load_ips or input_request or tcp_cinfo)
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyter-client/jupyter_client-${{ version }}.tar.gz
-  sha256: 3357212d9cbe01209e59190f67a3a7e1f387a4f4e88d1e0433ad84d7b262531d
+  sha256: d556811419a4f2d96c869af34e854e3f059b7cc2d6d01a9cd9c85c267691be3e
 
 build:
   number: 0
