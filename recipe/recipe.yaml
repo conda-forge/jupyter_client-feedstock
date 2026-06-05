@@ -17,7 +17,8 @@ source:
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
       - jupyter-kernel = jupyter_client.kernelapp:main
@@ -36,6 +37,7 @@ requirements:
     - pyzmq >=25.0
     - tornado >=6.4.1
     - traitlets >=5.3
+    - typing_extensions>=4.13.0
 
 tests:
   - python:
